@@ -49,3 +49,34 @@
     gap: 0.3rem;
 }
 
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    body {
+        margin: 0;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .cv,
+    .cv * {
+        visibility: visible;
+    }
+
+    .cv {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 210mm;
+        min-height: 297mm;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+}
