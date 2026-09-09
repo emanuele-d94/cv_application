@@ -1,0 +1,71 @@
+.toolbar {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: center;
+    gap: 2rem;
+    padding: 16px;
+}
+
+.toolbar-profile-picture,
+.toolbar-description,
+.toolbar-education{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+    text-align: center;
+}
+
+.toolbar-button{
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: salmon;
+    color: darkslategrey;
+    border : 6px solid darkslategrey;
+    border-radius: 12px;
+    align-self: center;
+    padding: 8px 8px;
+    cursor: pointer;
+
+    /* rende l'animazione fluida */
+    transition:
+            transform 0.15s ease,
+            box-shadow 0.15s ease,
+            background-color 0.15s ease;
+
+    /* effetto "sollevato" */
+    box-shadow: 0 2px 0 darkslategrey;
+}
+
+.toolbar-button:hover {
+    background-color: #ff8f87;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0 darkslategrey;
+}
+
+.toolbar-button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 darkslategrey;
+}
+
+.toolbar-textarea{
+    width: 100%;
+    font-size: 1rem;
+    color: darkslategrey;
+    border : 2px solid darkslategrey;
+    border-radius: 8px;
+    resize: none;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 16px;
+}
