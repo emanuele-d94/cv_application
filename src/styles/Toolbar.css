@@ -1,6 +1,4 @@
 .toolbar {
-    grid-column: 1/2;
-    grid-row: 2/3;
     display: flex;
     flex-direction: column;
     justify-items: start;
@@ -9,9 +7,17 @@
     padding: 16px;
 }
 
+/* Da qui in su, la toolbar occupa la colonna sinistra del layout a due colonne */
+@media (min-width: 768px) {
+    .toolbar {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+}
+
 .toolbar-profile-picture,
 .toolbar-description,
-.toolbar-education{
+.toolbar-education {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -20,12 +26,12 @@
     text-align: center;
 }
 
-.toolbar-button{
+.toolbar-button {
     font-size: 1rem;
     font-weight: bold;
     background-color: salmon;
     color: darkslategrey;
-    border : 6px solid darkslategrey;
+    border: 6px solid darkslategrey;
     border-radius: 12px;
     align-self: center;
     padding: 8px 8px;
@@ -52,20 +58,21 @@
     box-shadow: 0 2px 0 darkslategrey;
 }
 
-.toolbar-textarea{
+.toolbar-textarea {
     width: 100%;
     font-size: 1rem;
     color: darkslategrey;
-    border : 2px solid darkslategrey;
+    border: 2px solid darkslategrey;
     border-radius: 8px;
     resize: none;
 }
 
-.form-group{
+.form-group {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
     margin-bottom: 16px;
+    flex-wrap: wrap;
 }

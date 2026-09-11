@@ -1,24 +1,24 @@
 .cv {
-    grid-column: 2/3;
-    grid-row: 2/3;
     display: flex;
     flex-direction: column;
     justify-items: start;
     align-items: start;
 }
 
-.cv-header{
+.cv-header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap : 1rem;
+    gap: 1rem;
     padding: 16px;
 }
 
-.description{
-    width: 500px ;
-    height: 150px;
+.description {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 150px;
     border: 4px solid darkslategrey;
     border-radius: 8px;
     padding: 16px;
@@ -26,6 +26,7 @@
 
 .profile-picture {
     max-width: 150px;
+    width: 100%;
     height: auto;
     border: 4px solid darkslategrey;
     border-radius: 50%;
@@ -33,7 +34,7 @@
     display: block;
 }
 
-.cv-education{
+.cv-education {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -42,11 +43,34 @@
     gap: 16px;
 }
 
-.education{
+.education {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0.3rem;
+    width: 100%;
+}
+
+/* Da qui in su, cv-header affianca foto e descrizione */
+@media (min-width: 600px) {
+    .cv-header {
+        flex-direction: row;
+    }
+}
+
+/* Da qui in su, education passa a 2 colonne */
+@media (min-width: 480px) {
+    .education {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+/* Da qui in su, il Cv occupa la colonna destra del layout a due colonne */
+@media (min-width: 768px) {
+    .cv {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
 }
 
 @page {
