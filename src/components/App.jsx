@@ -14,7 +14,7 @@ function App() {
           <div className="app">
               <h1 className="app-header">CV APPLICATION</h1>
               <Toolbar setProfilePicture={setProfilePicture} setDescription={setDescription} setEducation={setEducation} />
-              <Cv profilePicture={profilePicture} description={description} education={education} />
+              <Cv profilePicture={profilePicture} description={description} education={education} setEducation={setEducation} />
           </div>
       </StrictMode>
   )

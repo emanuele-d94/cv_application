@@ -1,9 +1,8 @@
 import '../styles/Cv.css'
 import CvHeader from "./CvHeader.jsx";
 import CvEducation from "./CvEducation.jsx";
-import ToolbarButton from "./ToolbarButton.jsx";
 
-export default function Cv({ profilePicture, description, education }) {
+export default function Cv({ profilePicture, description, education, setEducation }) {
 
     const handlePrint = () => {
         window.print();
@@ -16,8 +15,7 @@ export default function Cv({ profilePicture, description, education }) {
                     profilePicture={profilePicture}
                     description={description}
                 />
-
-                <CvEducation education={education} />
+                <CvEducation education={education} setEducation={setEducation} />
             </div>
         </>
     )
